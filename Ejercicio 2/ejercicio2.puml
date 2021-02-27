@@ -1,0 +1,34 @@
+@startuml
+scale 2
+class Publico {
+    -dni: string
+    -nombre: string
+    -direccion: string
+    -telefono: integer    
+}
+
+class Abonado {
+    -numeroSocio: integer 
+}
+
+class Simpatizante {
+    -fechaAlta: DateTime 
+}
+
+class Partido {
+    -codigo: integer
+    -nombre: string
+    -fecha: DateTime
+}
+
+class Entrada {
+    -precio: float
+    -numeroAsiento: integer
+}
+
+Publico <|-- Abonado
+Publico <|-- Simpatizante
+Partido "1" *-- "*" Entrada
+Abonado "1" --- "0..5" Entrada
+Simpatizante "1" --- "0..1" Entrada
+@enduml

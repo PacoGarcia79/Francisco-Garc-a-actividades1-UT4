@@ -1,0 +1,54 @@
+@startuml
+scale 2
+class Tienda {
+    -cif: string
+    -ubicacion: string
+    -nombre: string    
+}
+
+class Equipo {
+    
+}
+
+class Esqui {    
+    -numeroSerie: integer 
+}
+
+class Marca {    
+    -direccionProveedor: string
+    -direccionServicioTecnico: string
+}
+
+class Gafa {
+    -marca: string
+    -modelo: string
+    -numeroSerie: integer 
+}
+
+class Baston {
+    -marca: string
+    -modelo: string
+    -numeroSerie: integer 
+}
+
+class Cliente {
+    -dni: string    
+    -nombre: string  
+    -telefono: integer
+}
+
+class Alquiler {
+    -fechaAlquiler: DateTime
+    -fechaDevolucion: DateTime
+
+}
+
+Tienda "1" --- "*" Cliente
+Tienda "1" --- "*" Equipo
+Equipo "1" *-- "*" Esqui
+Equipo "1" *-- "*" Gafa
+Equipo "1" *-- "*" Baston
+
+Cliente "1" --- "0..1" Equipo
+Esqui "*" --- "*" Marca
+@enduml
