@@ -48,7 +48,7 @@ Tienda "1" --- "*" Equipo
 Equipo "1" *-- "*" Esqui
 Equipo "1" *-- "*" Gafa
 Equipo "1" *-- "*" Baston
-
+Equipo "1" *-- "*" Alquiler
 Cliente "1" --- "0..1" Equipo
 Esqui "*" --- "*" Marca
 @enduml
