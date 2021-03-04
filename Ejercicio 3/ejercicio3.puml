@@ -3,45 +3,66 @@ scale 2
 class Tienda {
     -cif: string
     -ubicacion: string
-    -nombre: string    
+    -nombre: string 
+    + Cif()
+    + Nombre()
+    + Ubicacion()  
+    + AltaCliente()
+    + AltaEquipo()
 }
 
 class Equipo {
-    
+    + RegistraNumeroEquipo()
 }
 
 class Esqui {    
     -numeroSerie: integer 
+    + NumeroSerie()
 }
 
 class Marca {    
     -direccionProveedor: string
     -direccionServicioTecnico: string
+    + DireccionProveedor()
+    + DireccionServicioTecnico()
 }
 
 class Gafa {
     -marca: string
     -modelo: string
     -numeroSerie: integer 
+    + Marca()
+    + Modelo()
+    + NumeroSerie()
 }
 
 class Baston {
     -marca: string
     -modelo: string
     -numeroSerie: integer 
+    + Marca()
+    + Modelo()
+    + NumeroSerie()
 }
 
 class Cliente {
     -dni: string    
     -nombre: string  
     -telefono: integer
+    + Dni()
+    + Nombre()
+    + Telefono()  
+    + AlquilaEquipo()
 }
 
 class Alquiler {
     -fechaAlquiler: DateTime
     -fechaDevolucion: DateTime
-
+    + FechaAlquiler()
+    + FechaDevolucion()
+    + RegistraAlquiler()
 }
+
 
 Tienda "1" --- "*" Cliente
 Tienda "1" --- "*" Equipo

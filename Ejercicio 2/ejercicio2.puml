@@ -4,26 +4,40 @@ class Publico {
     -dni: string
     -nombre: string
     -direccion: string
-    -telefono: integer    
+    -telefono: integer  
+     + Dni()  
+     + Nombre()  
+     + Direccion()  
+     + Telefono()  
 }
 
 class Abonado {
     -numeroSocio: integer 
+    + NumeroSocio()
+    + CompraEntrada()
 }
 
 class Simpatizante {
     -fechaAlta: DateTime 
+    + FechaAlta()
+    + CompraEntrada()
 }
 
 class Partido {
     -codigo: integer
     -nombre: string
     -fecha: DateTime
+    + Codigo()
+    + Nombre()
+    + Fecha()
+    + VentaEntrada()
 }
 
 class Entrada {
     -precio: float
     -numeroAsiento: integer
+    + Precio()
+    + NumeroAsiento()
 }
 
 Publico <|-- Abonado
